@@ -1,17 +1,38 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for(i=0;i<array.length;i++){
+    for(j=i+1;j<array.length;j++){
+      if (array[i]+array[j] == target){
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 /* 
   Write the Big O time complexity of your function here
+    n*logn
 */
 
 /* 
   Add your pseudocode here
+    for(i=0;i<array.length;i++){
+      for(j=i;j<array.length;j++){
+        if (array[i]+array[j] = target){
+          return true;
+        }
+        else{
+          return false;
+        }
+      }
+    }
 */
 
 /*
   Add written explanation of your solution here
+    running through the array with the first element and then testing it with all elements to see if it adds to the targer.
+    then I test the second element with all of them, so on and so forth
 */
 
 // You can run `node index.js` to view these console logs
